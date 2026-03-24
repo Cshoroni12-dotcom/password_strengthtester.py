@@ -102,6 +102,7 @@ def format_time(seconds):
         return f"{seconds/31536000:.2f} years" #ok if its years just give up hacking bro
 
 print("Hello Please Enter You're Password")
+print("----------------------------------") #please dont let this grt over the screen
 pw = input("Enter password: ")
 
 score = passwordcheck(pw)
@@ -116,7 +117,8 @@ tips = feedback(pw)
 if tips:
     print("Suggestions:")
     for tip in tips:
-        print("-", tip) #i am not going to lie, no ordered me to put this what does this do? let me delete this//ook that's what it does how did i not think? maybe its cause its midnight and i have  a history test twomorrow
+        print("-", tip) #i am not going to lie, no ordered me to put this what does this do? let me delete this//ook that's what it does how d ca id i not think? maybe its cause its midnight and i have  a history  test twomorrow
+        print("----------------------------------") #please dont let this grt over the screen--
     #please no bugs plz
     #there were no bugs YAY
     #add more cool print menu soooooo maybe twomorrow mornign
