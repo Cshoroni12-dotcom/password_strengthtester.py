@@ -116,6 +116,7 @@ tips = feedback(pw)
 if tips:
     print("Suggestions:")
     for tip in tips:
-        print("-", tip) #i am not going to lie, my teachers/ friends recommneded, no ordered me to put this what does this do? let me delete this
+        print("-", tip) #i am not going to lie, no ordered me to put this what does this do? let me delete this//ook that's what it does how did i not think? maybe its cause its midnight and i have  a history test twomorrow
     #please no bugs plz
     #there were no bugs YAY
+    #add more cool print menu soooooo maybe twomorrow mornign
