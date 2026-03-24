@@ -22,6 +22,8 @@ def passwordcheck(password):
     if len(set(password)) < len(password) / 2:
         score -= 1 
     return score # almost forgot this
+
+
 #levels to score
 def get_strength(score):
     if score <= 2:
@@ -34,6 +36,8 @@ def get_strength(score):
         return "Strong"
     else:
         return "Very Strong"
+
+
 def feedback(password):
     tips = []
 
@@ -50,15 +54,68 @@ def feedback(password):
         tips.append("Add symbols (!@#)")
 
     return tips
+
+
+def advanced_charset(password):
+    lower = any(c.islower() for c in password)
+    upper = any(c.isupper() for c in password)
+    digit = any(c.isdigit() for c in password)
+    symbol = any(not c.isalnum() for c in password)
+
+    size = 0
+
+    if lower:
+        size += 26
+    if upper:
+        size += 26
+    if digit:
+        size += 10
+    if symbol:
+        size += 32
+
+    variety = sum([lower, upper, digit, symbol])
+    size += variety * 2  #this should help
+    return size
+
+
+#going to add a system that will track how long it will to take a skilled hacker to crack your password
+def estimate_crack_time(password):
+    charset = advanced_charset(password)
+    combinations = charset ** len(password) #big brain math stuff
+
+    guesses_per_second = 1_000_000_000 #assuming hacker is SPEED or just pro
+    seconds = combinations / guesses_per_second
+
+    return seconds
+
+
+def format_time(seconds):
+    if seconds < 60:
+        return f"{seconds:.2f} seconds"
+    elif seconds < 3600:
+        return f"{seconds/60:.2f} minutes"
+    elif seconds < 86400:
+        return f"{seconds/3600:.2f} hours"
+    elif seconds < 31536000:
+        return f"{seconds/86400:.2f} days"
+    else:
+        return f"{seconds/31536000:.2f} years" #ok if its years just give up hacking bro
+
+
 pw = input("Enter password: ")
 
 score = passwordcheck(pw)
 strength = get_strength(score)
+time_sec = estimate_crack_time(pw)
 
 print("Score:", score)
 print("Strength:", strength)
+print("Estimated crack time:", format_time(time_sec))
 
-for tip in feedback(pw):
-    print("-", tip)
+tips = feedback(pw)
+if tips:
+    print("Suggestions:")
+    for tip in tips:
+        print("-", tip) #i am not going to lie, my teachers/ friends recommneded, no ordered me to put this what does this do? let me delete this
     #please no bugs plz
     #there were no bugs YAY
