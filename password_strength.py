@@ -1,4 +1,4 @@
-def passwordcheck(password):
+ def passwordcheck(password):
     score = 0
     if len(password) >= 8:
         score += 1
@@ -101,7 +101,7 @@ def format_time(seconds):
     else:
         return f"{seconds/31536000:.2f} years" #ok if its years just give up hacking bro
 
-
+print("Hello Please Enter You're Password")
 pw = input("Enter password: ")
 
 score = passwordcheck(pw)
