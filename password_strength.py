@@ -141,3 +141,4 @@ elif yn == 'n':
     #ummm so the tip menu always appears.....
     #that was a wierd error
     #hmmm i think it was because its the loop fixed tho!
+    #i think its all done now
