@@ -1,7 +1,10 @@
- def passwordcheck(password):
+import random
+import string
+
+def passwordcheck(password):
     score = 0
     if len(password) >= 8:
-        score += 1
+         score += 1
     if len(password) >= 10:
         score += 1
     if len(password) >= 12:
@@ -23,7 +26,8 @@
         score -= 1 
     return score # almost forgot this
 
-
+def strongpass(password):
+ 
 #levels to score
 def get_strength(score):
     if score <= 2:
