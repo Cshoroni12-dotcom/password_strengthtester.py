@@ -109,7 +109,7 @@ def format_time(seconds):
     else:
         return f"{seconds/31536000:.2f} years" #ok if its years just give up hacking bro
 
-print("Hello Please Enter You're Password")
+print("Hello Please Enter the password you want to check the strength of: ")
 print("----------------------------------") #please dont let this grt over the screen
 pw = input("Enter password: ")
 
@@ -127,14 +127,17 @@ if tips:
     for tip in tips:
         print("-", tip) #i am not going to lie, no ordered me to put this what does this do? let me delete this//ook that's what it does how d ca id i not think? maybe its cause its midnight and i have  a history  test twomorrow
         print("----------------------------------") #please dont let this grt over the screen--
-        yn = input("or will you want us to generate a crack-proof password? press y for yes n for no")
-        if yn == y:
-            print("Cool! here's a good password for you:")
-            strongpass()
-        elif yn == n:
-            print("thank you for makeing a accout have a nice day!")
+yn = input("or will you want us to generate a crack-proof password? press y for yes n for no: ")
+if yn == 'y':
+    print("Cool! here's a good password for you:")
+    strongpass()
+elif yn == 'n':
+    print("thank you for checking! have a nice day!")
             
     #please no bugs plz
     #there were no bugs YAY
     #add more cool print menu soooooo maybe twomorrow mornign
     #added more cool print menu and also a random password generator
+    #ummm so the tip menu always appears.....
+    #that was a wierd error
+    #hmmm i think it was because its the loop fixed tho!
