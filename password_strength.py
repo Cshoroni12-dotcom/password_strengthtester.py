@@ -25,9 +25,13 @@ def passwordcheck(password):
     if len(set(password)) < len(password) / 2:
         score -= 1 
     return score # almost forgot this
-
-def strongpass(password):
- 
+def strongpass():
+    chars = string.ascii_letters + string.digits + string.punctuation
+    result = ''.join(random.choice(chars) for _ in range(16))
+    print("p.s dont forget to write it somewear")
+    print("-------------------------------------")
+    print(result)
+    print("-------------------------------------")
 #levels to score
 def get_strength(score):
     if score <= 2:
@@ -123,6 +127,14 @@ if tips:
     for tip in tips:
         print("-", tip) #i am not going to lie, no ordered me to put this what does this do? let me delete this//ook that's what it does how d ca id i not think? maybe its cause its midnight and i have  a history  test twomorrow
         print("----------------------------------") #please dont let this grt over the screen--
+        yn = input("or will you want us to generate a crack-proof password? press y for yes n for no")
+        if yn == y:
+            print("Cool! here's a good password for you:")
+            strongpass()
+        elif yn == n:
+            print("thank you for makeing a accout have a nice day!")
+            
     #please no bugs plz
     #there were no bugs YAY
     #add more cool print menu soooooo maybe twomorrow mornign
+    #added more cool print menu and also a random password generator
