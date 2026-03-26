@@ -44,7 +44,7 @@ def get_strength(score):
         return "Strong"
     else:
         return "Very Strong"
-
+#yay i just ended mu math academi
 
 def feedback(password):
     tips = []
