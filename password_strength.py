@@ -142,3 +142,4 @@ elif yn == 'n':
     #that was a wierd error
     #hmmm i think it was because its the loop fixed tho!
     #i think its all done now
+    #i do not see intress it doing tests :(
