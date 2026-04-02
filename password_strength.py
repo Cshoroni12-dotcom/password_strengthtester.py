@@ -111,7 +111,7 @@ def format_time(seconds):
 
 print("Hello Please Enter the password you want to check the strength of: ")
 print("----------------------------------") #please dont let this grt over the screen
-pw = input("Enter password: ")
+pw = input("Enter password: ") #we are not storing this bte 
 
 score = passwordcheck(pw)
 strength = get_strength(score)
@@ -119,7 +119,7 @@ time_sec = estimate_crack_time(pw)
 
 print("Score:", score)
 print("Strength:", strength)
-print("Estimated crack time:", format_time(time_sec))
+print("Estimated crack time:", format_time(time_sec)) # outputs rstimated crck time
 
 tips = feedback(pw)
 if tips:
