@@ -1,7 +1,7 @@
 import random
 import string
 
-def passwordcheck(password):
+def passwordcheck(password): #the best use of func in my opinion
     score = 0
     if len(password) >= 8:
          score += 1
@@ -20,6 +20,7 @@ def passwordcheck(password):
     if any(not c.isalnum() for c in password): #random but my cat was peaking at me at the door while coding, that jumpscared me so bad
         score += 1
     #i am 90% sure that this code is optimizable but my python knowledge ends here, maybe in the future
+    # might have made this smaller by usng return def fuctions fyn yn but no
     if password.lower() in ["password", "123456", "qwerty"]: #NO WAY theres actual people who do this tho
         score -= 3
     if len(set(password)) < len(password) / 2:
@@ -60,7 +61,7 @@ def feedback(password):
 
     if not any(not c.isalnum() for c in password):
         tips.append("Add symbols (!@#)")
-
+#same herr
     return tips
 
 
